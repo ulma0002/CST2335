@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ALab1</string>
+    <string name="app_name">Лабораторная 1</string>
     <string name="hello_message">ВСЕМ ПРИВЕТ!!!</string>
-    <string name="ButtonText">I\'m a button</string>
+    <string name="button">Кнопка</string>
+    <string name="app_name_2">Лабораторная 2</string>
+    <string name="login">Логин</string>
+    <string name="login_name">имя логина</string>
+    <string name="my_password">пароль</string>
+    <string name="login_button">Войти</string>
+    <string name="radio_Button">Переключатель</string>
+    <string name="check_Button">Флажок</string>
+    <string name="message">Что это делает?</string>
+    <string name="dialog_message">Bы хотите выйти?</string>
+    <string name="dialog_title">Сообщение</string>
+    <string name="ok">Мой ответ</string>
+    <string name="cancel">Отмена</string>
+    <string name="description">Фотоаппарат</string>
+    <string name="description_1">Флаг</string>
+    <string name="description_2">Ввести пароль </string>
 </resources>
