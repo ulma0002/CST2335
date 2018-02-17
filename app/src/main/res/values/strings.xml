@@ -3,6 +3,7 @@
     <string name="hello_message">Hello World!</string>
     <string name="button">I\'m a button</string>
     <string name="app_name_2">ALab2</string>
+    <string name="app_name_3">ALab3</string>
     <string name="login">Login</string>
     <string name="login_name">login name</string>
     <string name="textEmailAddress">EmailAddress</string>
@@ -13,7 +14,7 @@
     <string name="message">What does this do?</string>
     <string name="dialog_message">Do you want to finish the activity?</string>
     <string name="dialog_title">Notice</string>
-    <string name="ok">Here is my response</string>
+    <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
     <string name="description"> camera </string>
     <string name="description_1"> Flag </string>

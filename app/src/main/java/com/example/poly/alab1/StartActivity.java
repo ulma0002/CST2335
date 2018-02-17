@@ -17,7 +17,8 @@ public class StartActivity extends Activity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
         Log.i(ACTIVITY_NAME, "In onCreate()");
@@ -35,20 +36,21 @@ public class StartActivity extends Activity {
     }
 
     @Override
-    public void onActivityResult(int requestCode, int responseCode, Intent data) {
-        if (requestCode == 50) {
-
+    public void onActivityResult(int requestCode, int responseCode, Intent data)
+    {
+        if (requestCode == 50 )
+        {
             Log.i(ACTIVITY_NAME, "Returned to StartActivity.onActivityResult");
-        } else if (requestCode == Activity.RESULT_OK) {                    //=-1
-
-            messagePassed = data.getStringExtra("Response");
-            if (messagePassed != null) {
+        }
+           if (responseCode == Activity.RESULT_OK)
+            {
+                messagePassed = data.getStringExtra("Response");
                 text = "ListItemsActivity passed: My information to share";
                 duration = Toast.LENGTH_LONG;
                 Toast toast_message = Toast.makeText(StartActivity.this, text, duration);
                 toast_message.show();
-            }
-        }
+           }
+
     }
 
     @Override

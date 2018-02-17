@@ -27,22 +27,27 @@ public class LoginActivity extends Activity {
         Log.i(ACTIVITY_NAME, "In onCreate()");
 
         Button loginButton = findViewById(R.id.login_button);
-        EditText textEmailAddress = findViewById(R.id.textEmailAddress);
+       // EditText textEmailAddress = findViewById(R.id.textEmailAddress);
 
-//Use this if you need multiple shared preference files identified by name, which you
-// specify with the first parameter. We can call this from any Context in your app.
-        SharedPreferences prefs = getSharedPreferences(Lab3, Context.MODE_PRIVATE);   //  the created file can only be accessed by the calling application
-        SharedPreferences.Editor editor = prefs.edit();     //To write to a shared preferences file
-        editor.putString(getString(R.string.login_name), textEmailAddress.getText().toString());     //Pass the keys and values you want to write with methods such as putInt() and putString()
-        textEmailAddress.setText(prefs.getString("Email", null));
-        //editor.commit(); //to save the changes
-        editor.apply();  //Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background
+
+
+      //  editor.apply();  //Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background
 
         loginButton.setOnClickListener(new View.OnClickListener() {  //callback
             @Override
             public void onClick(View view) {
+                EditText textEmailAddress = findViewById(R.id.textEmailAddress);
+//Use this if you need multiple shared preference files identified by name, which you
+// specify with the first parameter. We can call this from any Context in your app
+                SharedPreferences prefs = getSharedPreferences(Lab3, Context.MODE_PRIVATE);   //  the created file can only be accessed by the calling application
+                SharedPreferences.Editor editor = prefs.edit();
+                //To write to a shared preferences file
+                editor.putString(getString(R.string.login_name), textEmailAddress.getText().toString());     //Pass the keys and values you want to write with methods such as putInt() and putString()
+                //textEmailAddress.setText(prefs.getString("Email", null));
+                editor.commit(); //to save the changes
                 //callback.onClick();
                // An Intent object specifies which Activity to start
+
                 Intent intent = new Intent(LoginActivity.this, StartActivity.class);
                 startActivity(intent);
             }

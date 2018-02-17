@@ -25,13 +25,13 @@ public class ListItemActivity extends Activity {
     CharSequence text;
     int duration;
     ImageButton camera;
-    CompoundButton buttonView;
+    //CompoundButton buttonView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_item);
-        ImageButton camera = findViewById(R.id.image_Button);
+         camera = findViewById(R.id.image_Button);
         camera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,6 +41,7 @@ public class ListItemActivity extends Activity {
                 }
             }
         });
+
 
         /*
          * Abstract method Called when the checked state of a compound button has changed
@@ -103,6 +104,14 @@ public class ListItemActivity extends Activity {
         Log.i(ACTIVITY_NAME, "In onCreate()");
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK && data != null) {
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            camera.setImageBitmap(imageBitmap);
+        }
+    }
     @Override
     public void onStart() {
         super.onStart();
