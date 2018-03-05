@@ -2,16 +2,22 @@
     <string name="app_name">ALab1</string>
     <string name="hello_message">Hello World!</string>
     <string name="button">I\'m a button</string>
+    <string name="button_Chat">Start Chat</string>
+    <string name="button_Send">Send</string>
     <string name="app_name_2">ALab2</string>
     <string name="app_name_3">ALab3</string>
+    <string name="app_name_4">ALab4</string>
+    <string name="app_name_5">ALab5</string>
     <string name="login">Login</string>
     <string name="login_name">login name</string>
     <string name="textEmailAddress">EmailAddress</string>
     <string name="my_password">password</string>
     <string name="login_button">Log in</string>
     <string name="radio_Button">RadioButton</string>
-    //<string name="check_Button">CheckBox</string>
+    <string name="chat_field">chatField</string>
+    <string name="check_Button">CheckBox</string>
     <string name="message">What does this do?</string>
+    <string name="message_text">message text</string>
     <string name="dialog_message">Do you want to finish the activity?</string>
     <string name="dialog_title">Notice</string>
     <string name="ok">OK</string>
@@ -19,5 +25,7 @@
     <string name="description"> camera </string>
     <string name="description_1"> Flag </string>
     <string name="description_2">Enter password </string>
+    <string name="description_row_even">even</string>
+    <string name="description_row_odd">odd</string>
 
 </resources>

@@ -11,45 +11,50 @@ import android.widget.Toast;
 public class StartActivity extends Activity {
 
     protected static final String ACTIVITY_NAME = "StartActivity";
-    String messagePassed;
+    String       messagePassed;
     CharSequence text;
-    int duration;
+    int          duration;
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-        Log.i(ACTIVITY_NAME, "In onCreate()");
 
         Button buttonText = findViewById(R.id.button);
-
         buttonText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent secondIntent = new Intent(StartActivity.this, ListItemActivity.class);
+                //startActivity(secondIntent);
+                // Activity is started with requestCode 50
                 startActivityForResult(secondIntent, 50);
-
+                Log.i(ACTIVITY_NAME, "In onCreate()");
+            }
+        });
+        Button buttonChat = findViewById(R.id.button_Chat);
+        buttonChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(StartActivity.this, ChatWindow.class);
+                startActivity(intent);
+                Log.i(ACTIVITY_NAME, "User clicked Start Chat");
             }
         });
     }
 
     @Override
-    public void onActivityResult(int requestCode, int responseCode, Intent data)
-    {
-        if (requestCode == 50 )
-        {
+    public void onActivityResult(int requestCode, int responseCode, Intent data) {
+        if (requestCode == 50) {
             Log.i(ACTIVITY_NAME, "Returned to StartActivity.onActivityResult");
         }
-           if (responseCode == Activity.RESULT_OK)
-            {
-                messagePassed = data.getStringExtra("Response");
-                text = "ListItemsActivity passed: My information to share";
-                duration = Toast.LENGTH_LONG;
-                Toast toast_message = Toast.makeText(StartActivity.this, text, duration);
-                toast_message.show();
-           }
+        if (responseCode == Activity.RESULT_OK) {
+            messagePassed = data.getStringExtra("Response");
+            text = "ListItemsActivity passed: My information to share";
+            duration = Toast.LENGTH_LONG;
+            Toast toast_message = Toast.makeText(StartActivity.this, text, duration);
+            toast_message.show();
+        }
 
     }
 

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:context="com.example.poly.alab1.ChatWindow">
+
+    <ListView
+        android:id="@+id/list_View"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@color/color_divider"
+        android:dividerHeight="10dp"
+        android:footerDividersEnabled="false">
+    </ListView>
+    <EditText
+        android:id="@+id/chat_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/button_Send"
+        android:layout_marginStart="22dp"
+        android:layout_toLeftOf="@+id/button_Send" />
+
+    <Button
+        android:id="@+id/button_Send"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="20dp"
+        android:text="@string/button_Send"/>
+
+</RelativeLayout>
+
+

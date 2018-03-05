@@ -23,15 +23,14 @@ public class ListItemActivity extends Activity {
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
     CharSequence text;
-    int duration;
-    ImageButton camera;
-    //CompoundButton buttonView;
+    ImageButton  camera;
+    int          duration;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_item);
-         camera = findViewById(R.id.image_Button);
+        camera = findViewById(R.id.image_Button);
         camera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -57,8 +56,8 @@ public class ListItemActivity extends Activity {
 
                 if (isChecked) {
 
-                   text = "Switch is ON";
-                   duration = Toast.LENGTH_SHORT;     //Show the view or text notification for a short period of time.
+                    text = "Switch is ON";
+                    duration = Toast.LENGTH_SHORT;     //Show the view or text notification for a short period of time.
                 } else {
                     text = "Switch is OFF";
                     duration = Toast.LENGTH_LONG;       //Show the view or text notification for a long period of time.
@@ -69,7 +68,7 @@ public class ListItemActivity extends Activity {
             }
         });
 
-       CheckBox checkBox = findViewById(R.id.check_Button);
+        CheckBox checkBox = findViewById(R.id.check_Button);
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
 
         {
@@ -107,17 +106,16 @@ public class ListItemActivity extends Activity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK && data != null) {
-            Bundle extras = data.getExtras();
+            Bundle extras      = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             camera.setImageBitmap(imageBitmap);
         }
     }
+
     @Override
     public void onStart() {
         super.onStart();
         Log.i(ACTIVITY_NAME, "In onStart()");
-
-
     }
 
     @Override
