@@ -133,7 +133,7 @@ public class WeatherForecastActivity extends Activity {
                         }
                         if (name.equals("weather")) {
                             iconName = parser.getAttributeValue(null, "icon");
-                            String imageURL_Str = "http://openweathermap.org/img/w/" + iconName + ".png";
+                           // String imageURL_Str = "http://openweathermap.org/img/w/" + iconName + ".png";
                             fileName = iconName + ".png";
 
                             File file = getBaseContext().getFileStreamPath(fileName);
@@ -150,6 +150,7 @@ public class WeatherForecastActivity extends Activity {
                                 Log.i("WeatherForecastActivity", "Found the image locally");
 
                             } else {
+                                String imageURL_Str = "http://openweathermap.org/img/w/" + iconName + ".png";
                                 //downloading and saving  image
                                 imageCurrentWeather = getImage(new URL(imageURL_Str));
                                 Log.i("WeatherForecastActivity", "Can't find image locally, download it");
