@@ -142,7 +142,7 @@ public class WeatherForecastActivity extends Activity {
                                 FileInputStream fis = null;
 
                                 try {
-                                    fis = openFileInput(iconName);   
+                                    fis = openFileInput(iconName);
                                 } catch (FileNotFoundException e) {
                                     e.printStackTrace();
                                 }

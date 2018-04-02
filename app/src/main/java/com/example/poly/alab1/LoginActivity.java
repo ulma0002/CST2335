@@ -13,7 +13,7 @@ import android.content.SharedPreferences;
 
 public class LoginActivity extends Activity {
 
-    protected static final String ACTIVITY_NAME = "StartActivity";
+    protected static final String ACTIVITY_NAME = "LoginActivity";
     private EditText          textEmailAddress;
     private SharedPreferences prefs;
     private Button            loginButton;

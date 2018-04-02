@@ -14,11 +14,11 @@ public class ChatDatabaseHelper extends SQLiteOpenHelper {
 
     public static       String DATABASE_NAME = "Messages.db";
     public static       String TABLE_NAME    = "CHAT_HISTORY";
-    public final static String ID            = "id";
-    public static final int KEY_ID        = 0;           // Column I (Primary Key)
+   // public final static String ID            = "id";
+    public static final String KEY_ID        = "ID";           // Column I (Primary Key)
     public static final String KEY_MESSAGE   = "MESSAGE";    // Column II
     public static final String CREATE_TABLE  = "CREATE TABLE " + TABLE_NAME +            //query of creating table
-            "(" + ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + KEY_MESSAGE + " TEXT);";
+            "(" + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + KEY_MESSAGE + " TEXT);";
     public static final String DROP_TABLE    = "DROP TABLE IF EXISTS " + TABLE_NAME;   // query of dropping table
     public static       int    VERSION_NUM   = 9;
     Context ctx;
